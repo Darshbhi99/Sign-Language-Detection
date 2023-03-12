@@ -27,6 +27,8 @@ for i in range(no_of_classes):
     counter = 0
     while counter<100:
         success, frame = cap.read()
+        cv2.imshow('frame', frame)
+        cv2.waitKey(25)
         cv2.imwrite(f'images/{i}/{counter}.jpg', frame)
         counter+=1
 
